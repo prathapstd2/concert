@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+    <title>flex box</title>
+    <style>
+        *{
+            margin: 0px;
+            box-sizing: border-box;
+            padding: 0px;
+            font-family: 'Poppins', sans-serif;
+        }
+        .header{
+            background-color: black;
+            overflow: hidden;
+            position: relative;
+        }
+        .header a{
+           float: left;
+           padding: 14px 16px;
+           text-decoration: none;
+           font-size: 16px;
+           color: white;
+           background-color: inherit;
+        }
+        .header a:hover{
+            background-color: white;
+            color: black;
+            transition: 0.5s;
+        }
+        .header button{
+            margin: 10px;
+            position: absolute;
+            right: 25px;
+            padding: 5px 14px;
+            outline: none;
+            border: 1px solid white;
+            background-color: inherit;
+            color: white;
+            border-radius: 40px;
+            cursor: pointer;
+        }
+        .header button:hover{
+            background-color: white;
+            color: black;
+            transition: 0.5s;   
+        }
+        .image{
+            width: 100%;
+            height: 600px;
+            background-color: grey;
+            background-image: url('Anirudh.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
+        }
+        .para{
+            width: 100%;
+            min-height: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 100px;
+        }
+        .para h1{
+            font-size: 50px;
+            font-weight: 200;
+        }
+        .para h4{
+            color: grey;
+            font-style: italic;
+            font-weight: 100;
+        }
+        .para p{
+            text-align: justify;
+        }
+        /*Artist*/
+        
+        .artist1{
+            width: 300px;
+            height: 300px;
+            background-image: url('artist1.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            float: left;
+            margin: 40px 20px;
+            border-radius: 50%;
+        }
+        .artist2{
+            width: 300px;
+            height: 300px;
+            background-image: url('artist2.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            float: left;
+            margin: 40px 20px;
+            border-radius: 50%;
+        }
+        .artist3{
+            width: 300px;
+            height: 300px;
+            background-image: url('artist3.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            float: left;
+            margin: 40px 20px;
+            border-radius: 50%;
+        }
+        .booking{
+            width: 100%;
+            min-height: 600px;
+            background-color: black;
+        }
+        .booking h1{
+            text-align: center;
+            color: white;
+            padding: 60px;
+            letter-spacing: 10px;
+            font-size: 50px;
+            font-weight: 200;
+        }
+        .booking h4{
+            text-align: center;
+            color: grey;
+            font-style: italic;
+            font-weight: 100;
+        }
+        .image3{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+        .imagess{
+            width: 275px;
+            height: 400px;
+            background-color: white;
+            margin: 40px 0px;
+        }
+        .inner-images1{
+            width: 100%;
+            height: 200px;
+            background-image: url('paris.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        .inner-images2{
+            width: 100%;
+            height: 200px;
+            background-image: url('Kochi.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        .inner-images3{
+            width: 100%;
+            height: 200px;
+            background-image: url('coimbatore.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        .content{
+            width: 100%;
+            height: 200px;
+            background-color: white;
+        }
+
+        .content{
+            padding: 10px;
+        }
+        .content h5{
+            padding: 5px;
+            letter-spacing: 3px;
+        }
+        .content p{
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .content button{
+            margin: 8px 0px;
+            padding: 6px;
+            outline: none;
+            border: 1px solid white;
+            background-color: green;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .content button:hover{
+            background-color: grey;
+            border: 1px solid none;
+        }
+        button[class="active"]{
+            background-color: orangered;
+            color: white;
+        }
+        button[class="active"]:hover{
+            background-color: red;
+            color: white;
+        }
+        .contact{
+            width: 100%;
+            min-height: 600px;
+            
+        }
+        .contact h1{
+            text-align: center;
+            font-size: 50px;
+            font-weight: 200;
+            padding: 40px;
+        }
+        .contact h4{
+            text-align: center;
+            font-style: italic;
+            color: grey;
+            padding-bottom: 20px;
+        }
+        .input{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .input input{
+           width: 300px;
+           height: 50px;
+           margin-top: 20px;
+           padding: 5px;
+           border: 1px solid black;
+        }
+        .input button{
+            margin-top: 30px;
+            padding: 14px 16px;
+            border: 2px solid blue;
+            background: inherit;
+            color: blue;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        .input button:hover{
+            background-color: blue;
+            color: white;
+
+        }
+        .finish{
+            width: 100%;
+            height: 200px;
+            background-color: grey;
+        }
+        .finish h4{
+            text-align: center;
+            font-size: 45px;
+            font-weight: normal;
+            padding: 50px;
+            letter-spacing: 15px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="#">HOME</a>
+        <a href="#">BAND</a>
+        <a href="#">TICKETS</a>
+        <a href="#">ARTIST</a>
+        <a href="#">MORE</a>
+        <button>CONTACT US</button>
+    </div>
+    
+    <div class="image"></div>
+   
+    <div class="para">
+        <h1>THE BAND</h1>
+        <h4>We love music</h4>
+        <p>We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+       
+        <div class="images2">
+            <div class="artist1"></div>
+            <div class="artist2"></div>
+            <div class="artist3"></div>
+        </div>
+    
+    </div>
+    <div class="booking">
+        <h1>TOUR TICKETS</h1>
+        <h4>Remember to book your tickets!</h4>
+        <div class="image3">
+            <div class="imagess">
+                <div class="inner-images1"></div>
+                <div class="content">
+                    <h5>Paris</h5>
+                    <h5>Wed 26 Jan 2024</h5>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo, beatae?</p>
+                    <button class="active">Sold-Out</button>
+                </div>
+            </div>
+            <div class="imagess">
+                <div class="inner-images2"></div>
+                <div class="content">
+                    <h5>Kochi</h5>
+                    <h5>Fri 26 Feb 2024</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, accusamus.</p>
+                    <button>Buy tickets</button>
+                </div>
+            </div>  
+            <div class="imagess">
+                <div class="inner-images3"></div>
+                <div class="content">
+                    <h5>Coimbatore</h5>
+                    <h5>Sun 11 march 2024</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, vel?</p>
+                    <button>Buy Tickets</button>
+                </div>
+            </div>    
+        </div>
+    </div>
+    <div class="contact">
+        <h1>Contact Us</h1>
+        <h4>Fan? Drop a note!</h4>
+        <div class="input">
+            <input type="text" placeholder="Name">
+            <input type="text" placeholder=Moblie-no>
+            <input type="text" placeholder="Message">
+            <button>Submit</button>
+        </div>
+    </div>
+    <div class="finish">
+        <h4>Let's Go Crazy</h4>
+    </div>
+</body>
+</html>
